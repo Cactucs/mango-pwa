@@ -7,10 +7,26 @@
     "src/styles/print.styl"
   ],
   "scripts": [
-    "src/scripts/index.es6"
+    "src/client.js",
+    "src/sw.js"
   ],
   "images": [
     "src/images/**/*.{jpg,png}"
+  ],
+  "static": [
+    "node_modules/lt-ie-9/lt-ie-9.min.js",
+    "node_modules/jade/runtime.js"
+  ],
+  "templates": [],
+  "dependencies": [
+    "lt-ie-9",
+    "stylus-normalize",
+    "jquery",
+    "jade",
+    "isomorphic-fetch",
+    "whatwg-fetch",
+    "express",
+    "sw-toolbox"
   ],
   "sprites": [
     {
@@ -18,23 +34,10 @@
       "name": false
     }
   ],
-  "static": [
-    "src/fonts/**",
-    "node_modules/lt-ie-9/lt-ie-9.min.js"
-  ],
-  "templates": [
-    "src/templates/*.jade"
-  ],
-  "dependencies": [
-    "lt-ie-9",
-    "stylus-normalize",
-    "jquery"
-  ],
-  "data": {
-    "global": "src/data/global.json"
-  },
+  "data": {},
   "hooks": {
     "init": "mango install"
   },
+  "everythingEs6": true,
   "version": ">=0.17"
 }

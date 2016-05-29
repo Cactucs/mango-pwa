@@ -1,13 +1,21 @@
-`mango-cli` project example
+Simple magical PWA
 ===========================
 
 Do you have `mango-cli` installed globally?
 
 If not: `npm install -g mango-cli`
 
-Init your project
------------------
+Then install dependencies `mango install`.
 
-Run command `mango init your-project-directory-name`.
+And run!
+```
+node src/server.js # Requires Node.js 6! (Maybe also 5, but not <=4)
+mango dev -p localhost:3000 # Need vesion, that transpiles .js files
+```
 
-Oh, that's it? Go to that directory, run `mango dev` and your browser should start up.
+Interesting things
+------------------
+
+- Magical components injection
+- Magical model injection and execution
+- Asyc jade templates getting

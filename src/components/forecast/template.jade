@@ -1,0 +1,12 @@
+.forecast(id=id)
+
+	a#forecast-reload(href="#") Aktualizovat
+
+	.forecast-current
+		| V Praze je právě #{forecast.currently.summary.toLowerCase()}.
+		| Je #{forecast.currently.temperature.toString().replace('.', ',')} °C.
+		
+	each hour in forecast.hourly.data
+		.forecast-hourly
+			- var date = new Date(hour.time * 1000)
+			| V #{date.getHours()}:00 bude #{hour.summary.toLowerCase()}.
